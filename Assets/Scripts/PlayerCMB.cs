@@ -32,10 +32,10 @@ public class PlayerCMB : MonoBehaviour
             timeBtwAttack -= Time.deltaTime;
         }
 
-        void OnDrawGizmoSelected()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(attPos.position, attRange);
-        }
+    }
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attPos.position, attRange);
     }
 }
