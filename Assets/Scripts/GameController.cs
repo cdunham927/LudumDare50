@@ -14,11 +14,12 @@ public class GameController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
-                //GameObject[] ob = (LivingThing)FindObjectsOfType<LivingThing>();
-                //foreach (LivingThing d in ob)
-                //{
-                //    d.Damage(dmg);
-                //}
+                Debug.Log("Pressed K to damage by " + dmg + ".");
+                LivingThing[] ob = FindObjectsOfType<LivingThing>();
+                foreach (LivingThing d in ob)
+                {
+                    d.Damage(dmg);
+                }
             }
         }
     }
