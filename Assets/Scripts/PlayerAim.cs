@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
 {
-    Vector3 worldPosition;
-    private Transform aimTransform;
-
-    private void Awake()
-    {
-        aimTransform = transform.Find("Aim");
-    }
     private void Update()
     {
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = Camera.main.nearClipPlane;
-        worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
-        aimTransform.LookAt(mousePos);
+        // convert mouse position into world coordinates
+        Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        // get direction you want to point at
+        Vector2 direction = (mouseScreenPosition - (Vector2)transform.position).normalized;
+
+        // set vector of transform directly
+        transform.up = direction;
     }
 }

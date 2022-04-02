@@ -20,6 +20,8 @@ public abstract class LivingThing : MonoBehaviour
         if (totDmg <= 0) totDmg = 1;
 
         hp -= totDmg;
+
+        if (hp <= 0) Die();
     }
 
     public virtual void Die()

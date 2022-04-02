@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     private Vector2 moveDirection;
+    public bool canMove = true;
 
     // Update is called once per frame
     void Update()
@@ -28,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     }
     void Move()
     {
-        rb.velocity = new Vector2(moveDirection.x * mSpeed, moveDirection.y * mSpeed);
+        if (canMove)
+        {
+            rb.velocity = new Vector2(moveDirection.x * mSpeed, moveDirection.y * mSpeed);
+        }
     }
 }

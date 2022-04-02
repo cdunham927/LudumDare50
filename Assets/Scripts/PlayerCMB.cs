@@ -15,27 +15,26 @@ public class PlayerCMB : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timeBtwAttack <= 0)
+        if (Input.GetMouseButtonDown(0) && timeBtwAttack <= 0)
         {
-            if(Input.GetMouseButtonDown(0))
+            Debug.Log("Attacking");
+            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attPos.position, attRange, whatIsEnemies);
+            if (enemiesToDamage.Length > 0)
             {
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attPos.position, attRange, whatIsEnemies );
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    enemiesToDamage[i].GetComponent<LivingThing>().Damage(dmg);
+                    enemiesToDamage[i].GetComponent<EnemyController>().Damage(dmg);
                 }
             }
             timeBtwAttack = startTimeBtwAttack;
         }
-        else
-        {
-            timeBtwAttack -= Time.deltaTime;
-        }
+
+        if (timeBtwAttack > 0) timeBtwAttack -= Time.deltaTime;
 
     }
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+            Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attPos.position, attRange);
     }
 }
