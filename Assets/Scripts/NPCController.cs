@@ -35,7 +35,10 @@ public class NPCController : LivingThing
 
     void Idle()
     {
-
+        if (Input.GetKeyDown(KeyCode.Q) && inRange)
+        {
+            ChangeState(npcstates.follow);
+        }
     }
 
     void Follow()
@@ -46,12 +49,20 @@ public class NPCController : LivingThing
             bod.AddForce(dir * spd * Time.deltaTime);
         }
 
+        if (Input.GetKeyDown(KeyCode.Q) && inRange)
+        {
+            ChangeState(npcstates.idle);
+        }
+
         if (!inRange) ChangeState(npcstates.idle);
     }
 
     void Panic()
     {
-
+        if (Input.GetKeyDown(KeyCode.Q) && inRange)
+        {
+            ChangeState(npcstates.follow);
+        }
     }
 
     private void Update()
@@ -67,11 +78,6 @@ public class NPCController : LivingThing
             case (npcstates.panic):
                 Panic();
                 break;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q) && inRange)
-        {
-            ChangeState(npcstates.follow);
         }
     }
 }
