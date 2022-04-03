@@ -2,24 +2,57 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : LivingThing
 {
-    public float mSpeed;
-    
     public Rigidbody2D rb;
-
     private Vector2 moveDirection;
     public bool canMove = true;
 
-    // Update is called once per frame
+    public int curWeapon = 0;
+    public GameObject[] weapons;
+
+    public override void Damage(float amt)
+    {
+        base.Damage(amt);
+    }
+
+    public override void Die()
+    {
+        FindObjectOfType<GameController>().Die();
+        base.Die();
+    }
+
+    public override void OnEnable()
+    {
+        base.OnEnable();
+    }
+
+    public void SwitchWeapon()
+    {
+        if (curWeapon == weapons.Length - 1)
+        {
+            weapons[curWeapon].SetActive(false);
+            curWeapon = 0;
+            weapons[curWeapon].SetActive(true);
+        }
+        else
+        {
+            weapons[curWeapon].SetActive(false);
+            curWeapon++;
+            weapons[curWeapon].SetActive(true);
+        }
+    }
+
     void Update()
     {
         ProcessInputs();
     }
+
     void FixedUpdate()
     {
         Move();
     }
+
     void ProcessInputs()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -27,11 +60,12 @@ public class PlayerMovement : MonoBehaviour
 
         moveDirection = new Vector2(moveX, moveY).normalized;
     }
+
     void Move()
     {
         if (canMove)
         {
-            rb.velocity = new Vector2(moveDirection.x * mSpeed, moveDirection.y * mSpeed);
+            rb.velocity = new Vector2(moveDirection.x * spd, moveDirection.y * spd);
         }
     }
 }

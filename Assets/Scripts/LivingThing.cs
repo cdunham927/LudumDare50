@@ -8,6 +8,21 @@ public abstract class LivingThing : MonoBehaviour
     public float hp;
     public float def;
     public float spd;
+    public Vector3 spawnPoint;
+    public bool hasSetSpawn = false;
+
+    public virtual void Awake()
+    {
+        spawnPoint = transform.position;
+        hasSetSpawn = true;
+    }
+
+    public void Respawn()
+    {
+        gameObject.SetActive(true);
+        transform.position = spawnPoint;
+        hp = maxHp;
+    }
 
     public virtual void OnEnable()
     {

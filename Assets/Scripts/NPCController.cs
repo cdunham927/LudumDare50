@@ -29,9 +29,12 @@ public class NPCController : LivingThing
     public GameObject speechBubbleParent;
     public Text speechBubbleText;
     public float dialogueTime = 7.5f;
+    public float idleRange = 10f;
+    public bool canFollow = true;
 
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
         dCanv = FindObjectOfType<DialogueCanvasController>();
         sentences = new Queue<string>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -56,6 +59,7 @@ public class NPCController : LivingThing
 
     public override void Die()
     {
+        ChangeState(npcstates.idle);
         base.Die();
     }
 
@@ -71,18 +75,18 @@ public class NPCController : LivingThing
     {
         dis = Vector2.Distance(transform.position, target.position);
 
+        if (dis >= idleRange) ChangeState(npcstates.idle);
+
         if (target != null && dis > maxFollowDistance)
         {
             Vector2 dir = target.position - transform.position;
             bod.AddForce(dir * spd * Time.deltaTime);
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && inRange)
+        if (Input.GetKeyDown(KeyCode.X))
         {
             ChangeState(npcstates.idle);
         }
-
-        if (!inRange) ChangeState(npcstates.idle);
     }
 
     void Panic()

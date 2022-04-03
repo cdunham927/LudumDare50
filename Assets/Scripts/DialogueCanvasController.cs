@@ -11,16 +11,11 @@ public class DialogueCanvasController : MonoBehaviour
     public Button continueButton;
     public bool isTalkingAlready = false;
     Dialogue dialogue;
-    Queue<string> sentences;
+    Queue<string> sentences = new Queue<string>();
     float timeBetweenChars;
 
-    PlayerMovement pMove;
-
-    private void Awake()
-    {
-        sentences = new Queue<string>();
-        pMove = FindObjectOfType<PlayerMovement>();
-    }
+    public PlayerMovement pMove;
+    public FortuneTeller ft;
 
     public virtual void StartDialogue(Dialogue d, float tbc = 0f)
     {
@@ -42,7 +37,15 @@ public class DialogueCanvasController : MonoBehaviour
         DisplayNextSentence();
     }
 
+    public void ShowCard()
+    {
+        continueButton.onClick.AddListener(delegate { ft.ShowCard(); });
+    }
 
+    public void RemoveCard()
+    {
+        continueButton.onClick.RemoveListener(delegate { ft.ShowCard(); });
+    }
 
     public virtual void DisplayNextSentence()
     {

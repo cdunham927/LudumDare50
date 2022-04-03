@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : LivingThing
 {
-    public enum enemystates { idle, follow, panic }
+    public enum enemystates { idle, chase, attack }
     public enemystates curState = enemystates.idle;
 
     public void ChangeState(enemystates newState)
@@ -27,12 +27,22 @@ public class EnemyController : LivingThing
 
     }
 
-    void Follow()
+    void Chase()
     {
 
     }
 
-    void Panic()
+    void PickAttack()
+    {
+
+    }
+
+    public void AttackOne()
+    {
+
+    }
+
+    public void AttackTwo()
     {
 
     }
@@ -44,11 +54,11 @@ public class EnemyController : LivingThing
             case (enemystates.idle):
                 Idle();
                 break;
-            case (enemystates.follow):
-                Follow();
+            case (enemystates.chase):
+                Chase();
                 break;
-            case (enemystates.panic):
-                Panic();
+            case (enemystates.attack):
+                PickAttack();
                 break;
         }
     }

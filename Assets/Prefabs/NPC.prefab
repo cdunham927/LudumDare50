@@ -147,7 +147,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 3
 --- !u!114 &5560512155820704499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +281,7 @@ MonoBehaviour:
   speechBubbleParent: {fileID: 2723577406035551202}
   speechBubbleText: {fileID: 6097533962623567089}
   dialogueTime: 4
+  idleRange: 10
 --- !u!50 &5560512156118493842
 Rigidbody2D:
   serializedVersion: 4
@@ -301,7 +302,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5560512156118493843
 BoxCollider2D:
   m_ObjectHideFlags: 0
