@@ -32,8 +32,12 @@ public class NPCController : LivingThing
     public float idleRange = 10f;
     public bool canFollow = true;
 
+    public Sprite[] sprites;
+    SpriteRenderer rend;
+
     public override void Awake()
     {
+        rend = GetComponent<SpriteRenderer>();
         base.Awake();
         dCanv = FindObjectOfType<DialogueCanvasController>();
         sentences = new Queue<string>();
@@ -81,6 +85,16 @@ public class NPCController : LivingThing
         {
             Vector2 dir = target.position - transform.position;
             bod.AddForce(dir * spd * Time.deltaTime);
+        }
+
+        if (target != null)
+        {
+            if (target.position.y > transform.position.y) rend.sprite = sprites[0];
+            if (target.position.x < transform.position.x) rend.sprite = sprites[3];
+            if (target.position.x > transform.position.x) rend.sprite = sprites[2];
+            if (target.position.y < transform.position.y) rend.sprite = sprites[1];
+
+            //rend.flipX = (target.position.x > transform.position.x);
         }
 
         if (Input.GetKeyDown(KeyCode.X))

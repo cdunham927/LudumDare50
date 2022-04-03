@@ -11,6 +11,14 @@ public class PlayerMovement : LivingThing
     public int curWeapon = 0;
     public GameObject[] weapons;
 
+    SpriteRenderer rend;
+
+    public override void Awake()
+    {
+        rend = GetComponent<SpriteRenderer>();
+        base.Awake();
+    }
+
     public override void Damage(float amt)
     {
         base.Damage(amt);
@@ -50,6 +58,13 @@ public class PlayerMovement : LivingThing
 
     void FixedUpdate()
     {
+        Vector2 mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        //Vector2 mousePos = Camera.main.
+        if (mousePos.y > 0.5f)
+        {
+            rend.sortingOrder = 3;
+        }
+        else rend.sortingOrder = 1;
         Move();
     }
 
