@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -13,6 +14,14 @@ public class GameController : MonoBehaviour
     LivingThing[] livingThings;
 
     public GameObject gameOverUI;
+    public Text gameOverText;
+
+    FloodController flood;
+
+    public void SetGameOverText(string s)
+    {
+        gameOverText.text = s;
+    }
 
     public void VillagerDeath()
     {
@@ -23,6 +32,7 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        flood = FindObjectOfType<FloodController>();
         livingThings = FindObjectsOfType<LivingThing>();
         numVillagers = FindObjectsOfType<NPCController>().Length;
         pMove = FindObjectOfType<PlayerMovement>();
@@ -69,6 +79,7 @@ public class GameController : MonoBehaviour
         if (deaths > 1)
         {
             FindObjectOfType<WeaponRack>().gameObject.SetActive(true);
+            flood.ResetTimer();
         }
 
         Invoke("RespawnThings", 0.5f);
