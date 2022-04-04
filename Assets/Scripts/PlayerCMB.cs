@@ -11,6 +11,8 @@ public class PlayerCMB : MonoBehaviour
     public float attRange;
     public LayerMask whatIsEnemies;
     public int dmg;
+    //public Animator camAnim;
+    //public Animator playerAnim;
 
     // Update is called once per frame
     void Update()
@@ -18,6 +20,8 @@ public class PlayerCMB : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && timeBtwAttack <= 0)
         {
             Debug.Log("Attacking");
+            //camAnim.SetTrigger("Shake");
+            //playerAnim.SetTrigger("attack");
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attPos.position, attRange, whatIsEnemies);
             if (enemiesToDamage.Length > 0)
             {
