@@ -19,6 +19,7 @@ public class EnemyController : LivingThing
     public float idleRange;
     public float maxFollowDistance;
     PlayerMovement pCont;
+    public float attackRange;
 
     public override void Awake()
     {
@@ -75,20 +76,12 @@ public class EnemyController : LivingThing
                 Vector2 dir = target.position - transform.position;
                 bod.AddForce(dir * spd * Time.deltaTime);
             }
+
+            if (dis < attackRange) Attack();
         }
     }
 
-    public virtual void PickAttack()
-    {
-
-    }
-
-    public virtual void AttackOne()
-    {
-
-    }
-
-    public virtual void AttackTwo()
+    public virtual void Attack()
     {
 
     }
@@ -104,7 +97,7 @@ public class EnemyController : LivingThing
                 Chase();
                 break;
             case (enemystates.attack):
-                PickAttack();
+                Attack();
                 break;
         }
     }

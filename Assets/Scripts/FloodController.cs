@@ -22,6 +22,7 @@ public class FloodController : MonoBehaviour
 
     public void ResetTimer()
     {
+        timerText.gameObject.SetActive(true);
         curTime = startTime;
         hasFlooded = false;
         runTimer = true;

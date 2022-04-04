@@ -34,17 +34,7 @@ public class GobboController : EnemyController
     }
 
 
-    public override void PickAttack()
-    {
-
-    }
-
-    public override void AttackOne()
-    {
-
-    }
-
-    public override void AttackTwo()
+    public override void Attack()
     {
 
     }
