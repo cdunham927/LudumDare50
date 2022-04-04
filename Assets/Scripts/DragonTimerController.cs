@@ -15,6 +15,11 @@ public class DragonTimerController : MonoBehaviour
         dragon = FindObjectOfType<DragonController>();
     }
 
+    public void EnableTimer()
+    {
+        distanceText.gameObject.SetActive(true);
+    }
+
     private void Update()
     {
         dis = Vector2.Distance(dragon.transform.position, vilTrans.position);

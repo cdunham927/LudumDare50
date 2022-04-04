@@ -8,6 +8,15 @@ public class EnemyTrigger : MonoBehaviour
     public EnemyController enemy;
     public bool finishedSpawning;
 
+    public int enemyCount;
+
+    private void Awake()
+    {
+        enemyCount = spawnPoints.Length;
+    }
+
+    
+
     void SpawnEnemies()
     {
         for (int i = 0; i < spawnPoints.Length; i++)

@@ -14,6 +14,7 @@ public class PlayerMovement : LivingThing
     private Animator animator;
 
     SpriteRenderer rend;
+    public SpriteRenderer[] weaponRend;
 
     public override void Awake()
     {
@@ -66,9 +67,16 @@ public class PlayerMovement : LivingThing
         if (mousePos.y > 0.5f)
         {
             rend.sortingOrder = 3;
+            //foreach (SpriteRenderer r in weaponRend)
+            //r.sortingOrder = 1;
         }
-        else rend.sortingOrder = 1;
-        Move();
+        else
+        {
+            rend.sortingOrder = 1;
+            //foreach (SpriteRenderer r in weaponRend)
+                //r.sortingOrder = 0;
+        }
+            Move();
     }
 
     void ProcessInputs()
