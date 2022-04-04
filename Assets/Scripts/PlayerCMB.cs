@@ -13,6 +13,15 @@ public class PlayerCMB : MonoBehaviour
     public int dmg;
     //public Animator camAnim;
     //public Animator playerAnim;
+    public Animator swordAnim;
+    PlayerMovement pMove;
+
+    public float pushForce;
+
+    private void Awake()
+    {
+        pMove = FindObjectOfType<PlayerMovement>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -20,6 +29,7 @@ public class PlayerCMB : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && timeBtwAttack <= 0)
         {
             Debug.Log("Attacking");
+            swordAnim.SetTrigger("Attacking");
             //camAnim.SetTrigger("Shake");
             //playerAnim.SetTrigger("attack");
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attPos.position, attRange, whatIsEnemies);
@@ -28,6 +38,7 @@ public class PlayerCMB : MonoBehaviour
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<EnemyController>().Damage(dmg);
+                    enemiesToDamage[i].attachedRigidbody.AddForce((enemiesToDamage[i].transform.position - pMove.transform.position) * pushForce);
                 }
             }
             timeBtwAttack = startTimeBtwAttack;

@@ -289,7 +289,10 @@ MonoBehaviour:
   maxDisHigh: 3
   maxFollowDistance: 0
   npcName: Blacksmith
-  dialogue: []
+  dialogue:
+  - sentences:
+    - "Making a proper weapon takes understanding, wisdom, skilled hands, and good
+      materials\u2026 but that\u2019s never stopped me before! Bwahahahaha!"
   timeBetweenTalks: 0.1
   timeBetweenChars: 0.5
   mainDialogue: 0
