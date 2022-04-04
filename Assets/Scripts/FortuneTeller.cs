@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FortuneTeller : MonoBehaviour
 {
+    public string npcName;
     DialogueCanvasController dCanv;
     public GameObject[] tarotCards;
     public Dialogue[] dialogue;
@@ -25,6 +26,6 @@ public class FortuneTeller : MonoBehaviour
     {
         dCanv.EndDialogue();
         dCanv.ShowCard();
-        dCanv.StartDialogue(dialogue[cont.deaths]);
+        dCanv.StartDialogue(dialogue[cont.deaths], npcName);
     }
 }

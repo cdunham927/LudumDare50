@@ -113,9 +113,10 @@ GameObject:
   - component: {fileID: 4856784683792211288}
   - component: {fileID: 4856784683792211293}
   - component: {fileID: 4856784683792211292}
-  m_Layer: 0
-  m_Name: Chef
-  m_TagString: Untagged
+  - component: {fileID: 2778505237734491250}
+  m_Layer: 7
+  m_Name: Cook
+  m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,11 +212,10 @@ MonoBehaviour:
   maxDisLow: 1.25
   maxDisHigh: 3
   maxFollowDistance: 0
+  npcName: Cook
   dialogue:
-    npcName: Chef
-    sentences:
-    - Fuck you.
-    - Get out of here, stop bugging me.
+  - sentences: []
+  - sentences: []
   timeBetweenTalks: 0.1
   timeBetweenChars: 0.01
   mainDialogue: 0
@@ -224,11 +224,8 @@ MonoBehaviour:
   dialogueTime: 2
   idleRange: 10
   canFollow: 1
-  sprites:
-  - {fileID: 21300000, guid: b990e8c97594e2545a188a37c8d33305, type: 3}
-  - {fileID: 21300000, guid: fda433de3d01d4e49a89d284b6f4beac, type: 3}
-  - {fileID: 21300000, guid: 0d7a5cc3a433fa9449e6347d20506df3, type: 3}
-  - {fileID: 21300000, guid: 5d203a54e95ec8c42afbe14c3fb31caa, type: 3}
+  namePrefab: {fileID: 5896344686680191029, guid: c2e3506959f0c5f43b5ea4c1b10918e4, type: 3}
+  hpPrefab: {fileID: 3919463850659044283, guid: 82b82c08ab2a0334088a97e1c6eb1b8c, type: 3}
 --- !u!50 &4856784683792211293
 Rigidbody2D:
   serializedVersion: 4
@@ -276,6 +273,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.65}
   m_EdgeRadius: 0
+--- !u!95 &2778505237734491250
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856784683792211267}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 94e835caa137bbb4ab58e55a2f0f0cd6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4856784684022920481
 GameObject:
   m_ObjectHideFlags: 0

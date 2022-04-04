@@ -17,7 +17,7 @@ public class DialogueCanvasController : MonoBehaviour
     public PlayerMovement pMove;
     public FortuneTeller ft;
 
-    public virtual void StartDialogue(Dialogue d, float tbc = 0f)
+    public virtual void StartDialogue(Dialogue d, string npcName, float tbc = 0f)
     {
         dialogue = d;
         timeBetweenChars = tbc;
@@ -32,7 +32,7 @@ public class DialogueCanvasController : MonoBehaviour
         //Add continue button function to UI button
         //continueButton => DisplayNextSentence();
         dialogueParent.SetActive(true);
-        nameText.text = dialogue.npcName;
+        nameText.text = npcName;
         continueButton.onClick.AddListener(delegate { DisplayNextSentence(); });
         DisplayNextSentence();
     }

@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 2415255519311642090}
   - component: {fileID: 2415255519311642087}
   - component: {fileID: 541773440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 0.3
   attPos: {fileID: 2415255519013102185}
-  attRange: 0.8
+  attRange: 1
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 64

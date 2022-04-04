@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Dialogue
+  - HP
+  - uiParent
+  - npc
   layers:
   - Default
   - TransparentFX

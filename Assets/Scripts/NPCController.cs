@@ -19,7 +19,8 @@ public class NPCController : LivingThing
 
     [Space]
     [Header("Dialogue")]
-    public Dialogue dialogue;
+    public string npcName;
+    public Dialogue[] dialogue;
     public Queue<string> sentences;
     DialogueCanvasController dCanv;
     public float timeBetweenTalks = 0.1f;
@@ -32,12 +33,32 @@ public class NPCController : LivingThing
     public float idleRange = 10f;
     public bool canFollow = true;
 
-    public Sprite[] sprites;
-    SpriteRenderer rend;
+    GameObject uiParent;
+    public GameObject namePrefab;
+    public GameObject hpPrefab;
+    Text nameText;
+    Image hpBar;
+    GameObject n;
+    GameObject h;
+
+    //Animations
+    Animator anim;
 
     public override void Awake()
     {
-        rend = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+
+        uiParent = GameObject.FindGameObjectWithTag("uiParent");
+        h = Instantiate(hpPrefab);
+        n = Instantiate(namePrefab);
+        h.transform.SetParent(uiParent.transform);
+        n.transform.SetParent(uiParent.transform);
+        nameText = n.GetComponent<Text>();
+        nameText.text = npcName;
+        hpBar = h.transform.GetChild(1).GetComponent<Image>();
+        n.SetActive(false);
+        h.SetActive(false);
+
         base.Awake();
         dCanv = FindObjectOfType<DialogueCanvasController>();
         sentences = new Queue<string>();
@@ -48,6 +69,7 @@ public class NPCController : LivingThing
     public override void OnEnable()
     {
         maxFollowDistance = Random.Range(maxDisLow, maxDisHigh);
+        hpBar.fillAmount = 1;
         base.OnEnable();
     }
 
@@ -59,10 +81,13 @@ public class NPCController : LivingThing
     public override void Damage(float amt)
     {
         base.Damage(amt);
+        hpBar.fillAmount = (hp / maxHp);
     }
 
     public override void Die()
     {
+        n.SetActive(false);
+        h.SetActive(false);
         ChangeState(npcstates.idle);
         base.Die();
     }
@@ -71,6 +96,8 @@ public class NPCController : LivingThing
     {
         if (Input.GetKeyDown(KeyCode.Q) && inRange)
         {
+            n.SetActive(true);
+            h.SetActive(true);
             ChangeState(npcstates.follow);
         }
     }
@@ -89,16 +116,20 @@ public class NPCController : LivingThing
 
         if (target != null)
         {
-            if (target.position.y > transform.position.y) rend.sprite = sprites[0];
-            if (target.position.x < transform.position.x) rend.sprite = sprites[3];
-            if (target.position.x > transform.position.x) rend.sprite = sprites[2];
-            if (target.position.y < transform.position.y) rend.sprite = sprites[1];
+            anim.SetFloat("moveX", bod.velocity.x);
+            anim.SetFloat("moveY", bod.velocity.y);
+            //if (target.position.y > transform.position.y) rend.sprite = sprites[0];
+            //if (target.position.x < transform.position.x) rend.sprite = sprites[3];
+            //if (target.position.x > transform.position.x) rend.sprite = sprites[2];
+            //if (target.position.y < transform.position.y) rend.sprite = sprites[1];
 
             //rend.flipX = (target.position.x > transform.position.x);
         }
 
         if (Input.GetKeyDown(KeyCode.X))
         {
+            n.SetActive(false);
+            h.SetActive(false);
             ChangeState(npcstates.idle);
         }
     }
@@ -135,14 +166,14 @@ public class NPCController : LivingThing
                 if (mainDialogue)
                 {
                     dCanv.EndDialogue();
-                    dCanv.StartDialogue(dialogue);
+                    dCanv.StartDialogue(dialogue[0], npcName);
                 }
                 else
                 {
                     if (!speechBubbleParent.activeInHierarchy)
                     {
                         EndDialogue();
-                        StartDialogue(dialogue);
+                        StartDialogue(dialogue[0]);
                     }
                 }
             }

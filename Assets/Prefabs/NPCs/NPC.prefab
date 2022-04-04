@@ -174,9 +174,10 @@ GameObject:
   - component: {fileID: 5560512156118493847}
   - component: {fileID: 5560512156118493842}
   - component: {fileID: 5560512156118493843}
-  m_Layer: 0
+  - component: {fileID: 1665591113195423714}
+  m_Layer: 7
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,11 +273,10 @@ MonoBehaviour:
   maxDisLow: 1.25
   maxDisHigh: 3
   maxFollowDistance: 0
+  npcName: 
   dialogue:
-    npcName: Bich
-    sentences:
-    - Fuck you.
-    - Cool, this works. Now fuck off.
+  - sentences: []
+  - sentences: []
   timeBetweenTalks: 0.1
   timeBetweenChars: 0.01
   mainDialogue: 0
@@ -285,11 +285,8 @@ MonoBehaviour:
   dialogueTime: 4
   idleRange: 10
   canFollow: 1
-  sprites:
-  - {fileID: 21300000, guid: 6c04c4d4abf0722468958258eb970063, type: 3}
-  - {fileID: 21300000, guid: 70876003ca4fe6e4ca8ebc26d6a0d0b0, type: 3}
-  - {fileID: 21300000, guid: 5f7ec6756648cf14698aacadc75ad921, type: 3}
-  - {fileID: 21300000, guid: ba63a1692007bca4fa0994d393d74d91, type: 3}
+  namePrefab: {fileID: 5896344686680191029, guid: c2e3506959f0c5f43b5ea4c1b10918e4, type: 3}
+  hpPrefab: {fileID: 3919463850659044283, guid: 82b82c08ab2a0334088a97e1c6eb1b8c, type: 3}
 --- !u!50 &5560512156118493842
 Rigidbody2D:
   serializedVersion: 4
@@ -337,6 +334,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.65}
   m_EdgeRadius: 0
+--- !u!95 &1665591113195423714
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5560512156118493836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f1a0a516c645104aa4a618fbc684fd1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6198735181620665111
 GameObject:
   m_ObjectHideFlags: 0

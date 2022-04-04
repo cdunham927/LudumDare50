@@ -229,9 +229,10 @@ GameObject:
   - component: {fileID: 4550006670422725063}
   - component: {fileID: 4550006670422725058}
   - component: {fileID: 4550006670422725059}
-  m_Layer: 0
+  - component: {fileID: 3198087938248451004}
+  m_Layer: 7
   m_Name: Goth
-  m_TagString: Untagged
+  m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,11 +328,10 @@ MonoBehaviour:
   maxDisLow: 1.25
   maxDisHigh: 3
   maxFollowDistance: 0
+  npcName: Goth
   dialogue:
-    npcName: Goth
-    sentences:
-    - Fuck you, times two.
-    - Cool, this works. Now fuck off.
+  - sentences: []
+  - sentences: []
   timeBetweenTalks: 0.1
   timeBetweenChars: 0.5
   mainDialogue: 0
@@ -340,11 +340,8 @@ MonoBehaviour:
   dialogueTime: 2
   idleRange: 10
   canFollow: 1
-  sprites:
-  - {fileID: 21300000, guid: a441d655337fbfe43b84beb1de34033f, type: 3}
-  - {fileID: 21300000, guid: 9704a9ae0575ccd49861451d625ceea3, type: 3}
-  - {fileID: 21300000, guid: 183f2dbb8875a174ab172fd4f06b2d4c, type: 3}
-  - {fileID: 21300000, guid: 6774d968ed4ccdf41948785497804194, type: 3}
+  namePrefab: {fileID: 5896344686680191029, guid: c2e3506959f0c5f43b5ea4c1b10918e4, type: 3}
+  hpPrefab: {fileID: 3919463850659044283, guid: 82b82c08ab2a0334088a97e1c6eb1b8c, type: 3}
 --- !u!50 &4550006670422725058
 Rigidbody2D:
   serializedVersion: 4
@@ -392,6 +389,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.65}
   m_EdgeRadius: 0
+--- !u!95 &3198087938248451004
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4550006670422725084}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 39013ca0cda962e4a83ae288003bdf71, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6323653753091922098
 GameObject:
   m_ObjectHideFlags: 0
