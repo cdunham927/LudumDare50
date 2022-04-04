@@ -11,6 +11,8 @@ public class PlayerMovement : LivingThing
     public int curWeapon = 0;
     public GameObject[] weapons;
 
+    private Animator animator;
+
     SpriteRenderer rend;
 
     public override void Awake()
@@ -54,6 +56,7 @@ public class PlayerMovement : LivingThing
     void Update()
     {
         ProcessInputs();
+       
     }
 
     void FixedUpdate()
@@ -74,8 +77,16 @@ public class PlayerMovement : LivingThing
         float moveY = Input.GetAxisRaw("Vertical");
 
         moveDirection = new Vector2(moveX, moveY).normalized;
+        Move();
+        animator.SetFloat("movementX", moveX);
+        animator.SetFloat("movementY", moveY);
+            
+        
     }
-
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Move()
     {
         if (canMove)
