@@ -23,7 +23,6 @@ public class EnemyController : LivingThing
     PlayerMovement pCont;
     
     public float attackRange;
-    public float NPCtodmg;
     public int dmg;
     public Transform attPos;
 
