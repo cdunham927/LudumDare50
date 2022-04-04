@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyController : LivingThing
 {
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
     public enum enemystates { idle, chase, attack }
     public enemystates curState = enemystates.idle;
     Transform target;
@@ -19,7 +21,11 @@ public class EnemyController : LivingThing
     public float idleRange;
     public float maxFollowDistance;
     PlayerMovement pCont;
+    
     public float attackRange;
+    public float NPCtodmg;
+    public int dmg;
+    public Transform attPos;
 
     public override void Awake()
     {
@@ -83,10 +89,25 @@ public class EnemyController : LivingThing
 
     public virtual void Attack()
     {
+        { 
+            Debug.Log("Attacking");
+            //enemyAnim.SetTrigger("attack")
+            Collider2D[] NPCtodmg = Physics2D.OverlapCircleAll(attPos.position, attackRange, targMask);
+            if (NPCtodmg.Length > 0)
+            {
+                for (int i = 0; i < NPCtodmg.Length; i++)
+                {
+                    NPCtodmg[i].GetComponent<LivingThing>().Damage(dmg);
+                }
+            }
+            timeBtwAttack = startTimeBtwAttack;
+        }
+
+        if (timeBtwAttack > 0) timeBtwAttack -= Time.deltaTime;
 
     }
 
-    private void Update()
+private void Update()
     {
         switch (curState)
         {
@@ -108,5 +129,11 @@ public class EnemyController : LivingThing
         {
             target = collision.transform;
         }
+
+    }
+    void OnDrawGizmo()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(attPos.position, attackRange);
     }
 }
