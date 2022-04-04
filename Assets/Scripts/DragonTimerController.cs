@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DragonTimerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    float dis;
+    public DragonController dragon;
+    public Transform vilTrans;
+    public Text distanceText;
+
+    void Awake()
     {
-        
+        dragon = FindObjectOfType<DragonController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        dis = Vector2.Distance(dragon.transform.position, vilTrans.position);
+
+        distanceText.text = "Dragon imminent: " + dis.ToString() + "m";
     }
 }

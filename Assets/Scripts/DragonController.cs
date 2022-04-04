@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DragonController : EnemyController
 {
+    public GameObject vilTrans;
+
     public override void Awake()
     {
         base.Awake();
@@ -24,5 +26,30 @@ public class DragonController : EnemyController
         base.OnEnable();
     }
 
+    public override void PickAttack()
+    {
+        base.PickAttack();
+    }
 
+    public override void Idle()
+    {
+        base.Idle();
+    }
+
+    public override void Chase()
+    {
+        Vector2 dir = vilTrans.transform.position - transform.position;
+
+        bod.AddForce(dir * spd * Time.deltaTime);
+    }
+
+    public override void AttackTwo()
+    {
+        base.AttackTwo();
+    }
+
+    public override void AttackOne()
+    {
+        base.AttackOne();
+    }
 }

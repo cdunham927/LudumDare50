@@ -64,6 +64,11 @@ public class GameController : MonoBehaviour
     {
         deaths++;
         ft.FTDialogue();
+        EnemyTrigger[] triggers = FindObjectsOfType<EnemyTrigger>();
+        foreach(EnemyTrigger t in triggers)
+        {
+            t.finishedSpawning = false;
+        }
 
         //NPCs can follow the player
         if (deaths > 0)
