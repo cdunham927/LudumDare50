@@ -1777,7 +1777,7 @@ MonoBehaviour:
   startTime: 300
   hasFlooded: 0
   gameOverMessage: Failed to stop the flood.
-  runTimer: 1
+  runTimer: 0
 --- !u!212 &1648220634
 SpriteRenderer:
   m_ObjectHideFlags: 0
