@@ -1,0 +1,756 @@
+fileFormatVersion: 2
+guid: efb73534870ab8e4f9130927a212b167
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3591629591946997855
+    second: DragonFireSpritesheet_0
+  - first:
+      213: -5959574075597307744
+    second: DragonFireSpritesheet_1
+  - first:
+      213: 2811164649534837091
+    second: DragonFireSpritesheet_2
+  - first:
+      213: -2701755451779872016
+    second: DragonFireSpritesheet_3
+  - first:
+      213: -2515534718346751880
+    second: DragonFireSpritesheet_4
+  - first:
+      213: 2446918219211565008
+    second: DragonFireSpritesheet_5
+  - first:
+      213: 3823495320252973050
+    second: DragonFireSpritesheet_6
+  - first:
+      213: 6335582937655921685
+    second: DragonFireSpritesheet_7
+  - first:
+      213: -644351799359332105
+    second: DragonFireSpritesheet_8
+  - first:
+      213: -5965088238898888416
+    second: DragonFireSpritesheet_9
+  - first:
+      213: -7308175204645137529
+    second: DragonFireSpritesheet_10
+  - first:
+      213: 307945275451596259
+    second: DragonFireSpritesheet_11
+  - first:
+      213: -590608472746546923
+    second: DragonFireSpritesheet_12
+  - first:
+      213: 8594951579360568685
+    second: DragonFireSpritesheet_13
+  - first:
+      213: -8727547498070237461
+    second: DragonFireSpritesheet_14
+  - first:
+      213: -4056789549586795802
+    second: DragonFireSpritesheet_15
+  - first:
+      213: 2569025232651975888
+    second: DragonFireSpritesheet_16
+  - first:
+      213: -1112322231249795788
+    second: DragonFireSpritesheet_17
+  - first:
+      213: -2484400696226751709
+    second: DragonFireSpritesheet_18
+  - first:
+      213: -6413251744831326739
+    second: DragonFireSpritesheet_19
+  - first:
+      213: 151127023381243017
+    second: DragonFireSpritesheet_20
+  - first:
+      213: -6503641201393883951
+    second: DragonFireSpritesheet_21
+  - first:
+      213: 2325379269536829343
+    second: DragonFireSpritesheet_22
+  - first:
+      213: 3133590615101094427
+    second: DragonFireSpritesheet_23
+  - first:
+      213: -931329912399559570
+    second: DragonFireSpritesheet_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 2
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10208
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5038c8a51808d130800000000000000
+      internalID: 3591629591946997855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 3137
+        y: 10208
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0456314f65b4da0800000000000000
+      internalID: -5959574075597307744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 6274
+        y: 10208
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361d8a4ca53430720800000000000000
+      internalID: 2811164649534837091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 9411
+        y: 10208
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa8faa2bbf618ad0800000000000000
+      internalID: -2701755451779872016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 12548
+        y: 10208
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87097c46086071dd0800000000000000
+      internalID: -2515534718346751880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7656
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d76982f72335f120800000000000000
+      internalID: 2446918219211565008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 3137
+        y: 7656
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afffb0c6cb8cf0530800000000000000
+      internalID: 3823495320252973050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 6274
+        y: 7656
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cc10c4d138ce750800000000000000
+      internalID: 6335582937655921685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 9411
+        y: 7656
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0adc0d37dce07f0800000000000000
+      internalID: -644351799359332105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 12548
+        y: 7656
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0214292e9dfb73da0800000000000000
+      internalID: -5965088238898888416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5104
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7831fca2f55249a90800000000000000
+      internalID: -7308175204645137529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 3137
+        y: 5104
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed5d81b89a064400800000000000000
+      internalID: 307945275451596259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 6274
+        y: 5104
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5192b9429bcbdc7f0800000000000000
+      internalID: -590608472746546923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 9411
+        y: 5104
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6528756ce6674770800000000000000
+      internalID: 8594951579360568685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 12548
+        y: 5104
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee9c218ac581e680800000000000000
+      internalID: -8727547498070237461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2552
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2bc50066363b7c0800000000000000
+      internalID: -4056789549586795802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 3137
+        y: 2552
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc7c3b76d207a320800000000000000
+      internalID: 2569025232651975888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 6274
+        y: 2552
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4350692f2dc3090f0800000000000000
+      internalID: -1112322231249795788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 9411
+        y: 2552
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32bdbadcab2a58dd0800000000000000
+      internalID: -2484400696226751709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 12548
+        y: 2552
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5bc26548d8ff6a0800000000000000
+      internalID: -6413251744831326739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984e9902a39e81200800000000000000
+      internalID: 151127023381243017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 3137
+        y: 0
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4a25cf8cc6eb5a0800000000000000
+      internalID: -6503641201393883951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 6274
+        y: 0
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9fccc01028654020800000000000000
+      internalID: 2325379269536829343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 9411
+        y: 0
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a399cdf00cc7b20800000000000000
+      internalID: 3133590615101094427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonFireSpritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 12548
+        y: 0
+        width: 3137
+        height: 2552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e648aba01604313f0800000000000000
+      internalID: -931329912399559570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

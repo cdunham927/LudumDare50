@@ -199,7 +199,7 @@ MonoBehaviour:
   speechBubbleText: {fileID: 4097280080208616923}
   dialogueTime: 2
   idleRange: 10
-  canFollow: 1
+  canFollow: 0
   namePrefab: {fileID: 5896344686680191029, guid: c2e3506959f0c5f43b5ea4c1b10918e4, type: 3}
   hpPrefab: {fileID: 3919463850659044283, guid: 82b82c08ab2a0334088a97e1c6eb1b8c, type: 3}
 --- !u!50 &2407266407801664440
