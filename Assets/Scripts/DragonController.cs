@@ -26,9 +26,9 @@ public class DragonController : EnemyController
         base.OnEnable();
     }
 
-    public override void PickAttack()
+    public override void Attack()
     {
-        base.PickAttack();
+
     }
 
     public override void Idle()
@@ -41,15 +41,5 @@ public class DragonController : EnemyController
         Vector2 dir = vilTrans.transform.position - transform.position;
 
         bod.AddForce(dir * spd * Time.deltaTime);
-    }
-
-    public override void AttackTwo()
-    {
-        base.AttackTwo();
-    }
-
-    public override void AttackOne()
-    {
-        base.AttackOne();
     }
 }

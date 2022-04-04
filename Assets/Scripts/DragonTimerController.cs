@@ -19,6 +19,7 @@ public class DragonTimerController : MonoBehaviour
     {
         dis = Vector2.Distance(dragon.transform.position, vilTrans.position);
 
-        distanceText.text = "Dragon imminent: " + dis.ToString() + "m";
+        float d = Mathf.Round((dis * 100f) * 0.01f);
+        distanceText.text = "Dragon imminent: " + d.ToString() + "m";
     }
 }

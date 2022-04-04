@@ -145,6 +145,7 @@ MonoBehaviour:
   detCirc: {fileID: 2134787286334213151}
   idleRange: 15
   maxFollowDistance: 2
+  attackRange: 0
 --- !u!114 &2134787286086359583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +174,7 @@ MonoBehaviour:
   detCirc: {fileID: 2134787286334213151}
   idleRange: 15
   maxFollowDistance: 2
+  attackRange: 0
 --- !u!114 &2134787286086359576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +202,8 @@ MonoBehaviour:
     m_Bits: 128
   detCirc: {fileID: 2134787286334213151}
   idleRange: 20
-  maxFollowDistance: 2
+  maxFollowDistance: 4
+  attackRange: 3.25
 --- !u!50 &2134787286086359582
 Rigidbody2D:
   serializedVersion: 4
