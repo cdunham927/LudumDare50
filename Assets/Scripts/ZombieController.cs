@@ -36,6 +36,6 @@ public class ZombieController : EnemyController
 
     public override void Attack()
     {
-
+        base.Attack();
     }
 }

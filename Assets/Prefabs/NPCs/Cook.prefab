@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.05}
+  m_AnchoredPosition: {x: 0, y: 1.78}
   m_SizeDelta: {x: 831, y: 467}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6799909872098697204
@@ -212,9 +212,10 @@ MonoBehaviour:
   maxDisLow: 1.25
   maxDisHigh: 3
   maxFollowDistance: 0
-  npcName: Cook
+  npcName: Jayne Dwanson
   dialogue:
-  - sentences: []
+  - sentences:
+    - "Can you smell what I\u2019m cookin\u2019?"
   - sentences: []
   timeBetweenTalks: 0.1
   timeBetweenChars: 0.01

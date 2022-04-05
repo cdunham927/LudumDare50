@@ -129,12 +129,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3851dbc4a95cbb845834a5906e183e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 30
+  maxHp: 25
   hp: 0
   def: 1
   spd: 125
   spawnPoint: {x: 0, y: 0, z: 0}
   hasSetSpawn: 0
+  startTimeBtwAttack: 0.4
   curState: 0
   inRange: 0
   timeBetweenTargetFinds: 0
@@ -144,8 +145,10 @@ MonoBehaviour:
     m_Bits: 128
   detCirc: {fileID: 2134787286334213151}
   idleRange: 15
-  maxFollowDistance: 2
-  attackRange: 0
+  maxFollowDistance: 2.1
+  attackRange: 2
+  dmg: 10
+  attPos: {fileID: 2134787286086359580}
 --- !u!114 &2134787286086359583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,9 +164,10 @@ MonoBehaviour:
   maxHp: 25
   hp: 0
   def: 1
-  spd: 125
+  spd: 150
   spawnPoint: {x: 0, y: 0, z: 0}
   hasSetSpawn: 0
+  startTimeBtwAttack: 0
   curState: 0
   inRange: 0
   timeBetweenTargetFinds: 0
@@ -173,8 +177,10 @@ MonoBehaviour:
     m_Bits: 128
   detCirc: {fileID: 2134787286334213151}
   idleRange: 15
-  maxFollowDistance: 2
-  attackRange: 0
+  maxFollowDistance: 2.25
+  attackRange: 2.5
+  dmg: 10
+  attPos: {fileID: 2134787286086359580}
 --- !u!114 &2134787286086359576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +199,7 @@ MonoBehaviour:
   spd: 175
   spawnPoint: {x: 0, y: 0, z: 0}
   hasSetSpawn: 0
+  startTimeBtwAttack: 0
   curState: 0
   inRange: 0
   timeBetweenTargetFinds: 0
@@ -204,6 +211,9 @@ MonoBehaviour:
   idleRange: 20
   maxFollowDistance: 4
   attackRange: 3.25
+  dmg: 0
+  attPos: {fileID: 0}
+  pushForce: 40
 --- !u!50 &2134787286086359582
 Rigidbody2D:
   serializedVersion: 4

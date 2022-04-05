@@ -193,6 +193,7 @@ MonoBehaviour:
   spd: 125
   spawnPoint: {x: 0, y: 0, z: 0}
   hasSetSpawn: 0
+  startTimeBtwAttack: 0.65
   curState: 0
   inRange: 0
   timeBetweenTargetFinds: 0
@@ -203,6 +204,9 @@ MonoBehaviour:
   detCirc: {fileID: 866765146772137229}
   idleRange: 15
   maxFollowDistance: 2
+  attackRange: 2.25
+  dmg: 5
+  attPos: {fileID: 866765147086058254}
 --- !u!50 &866765147086058252
 Rigidbody2D:
   serializedVersion: 4

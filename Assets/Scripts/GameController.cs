@@ -70,6 +70,12 @@ public class GameController : MonoBehaviour
             t.finishedSpawning = false;
         }
 
+        EnemyController[] enemies = FindObjectsOfType<EnemyController>();
+        foreach(EnemyController e in enemies)
+        {
+            e.Respawn();
+        }
+
         //NPCs can follow the player
         if (deaths > 0)
         {
@@ -83,8 +89,8 @@ public class GameController : MonoBehaviour
         //Players can switch weapons
         if (deaths > 1)
         {
-            FindObjectOfType<WeaponRack>().gameObject.SetActive(true);
-            flood.ResetTimer();
+            //FindObjectOfType<WeaponRack>().gameObject.SetActive(true);
+            //flood.ResetTimer();
         }
 
         Invoke("RespawnThings", 0.5f);

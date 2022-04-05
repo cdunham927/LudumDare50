@@ -8,7 +8,7 @@ public class EnemyController : LivingThing
     public float startTimeBtwAttack;
     public enum enemystates { idle, chase, attack }
     public enemystates curState = enemystates.idle;
-    Transform target;
+    protected Transform target;
     protected Rigidbody2D bod;
     protected Animator anim;
 
@@ -49,14 +49,25 @@ public class EnemyController : LivingThing
     public void GetTarget()
     {
         Collider2D[] thingsInRange = Physics2D.OverlapCircleAll(transform.position, detCirc.radius + checkRadius, targMask);
-        target = thingsInRange[Random.Range(0, thingsInRange.Length)].transform;
+        if (thingsInRange.Length > 0)
+        {
+            target = thingsInRange[Random.Range(0, thingsInRange.Length)].transform;
 
-        ChangeState(enemystates.chase);
+            ChangeState(enemystates.chase);
+        }
     }
 
     public override void Die()
     {
         base.Die();
+    }
+
+    public override void Respawn()
+    {
+        ChangeState(enemystates.idle);
+        transform.position = spawnPoint;
+        hp = maxHp;
+        gameObject.SetActive(false);
     }
 
     public virtual void Idle()
@@ -82,7 +93,7 @@ public class EnemyController : LivingThing
                 bod.AddForce(dir * spd * Time.deltaTime);
             }
 
-            if (dis < attackRange) Attack();
+            if (dis < attackRange && timeBtwAttack <= 0) Attack();
         }
     }
 
@@ -108,6 +119,8 @@ public class EnemyController : LivingThing
 
 private void Update()
     {
+        if (timeBtwAttack > 0) timeBtwAttack -= Time.deltaTime;
+
         switch (curState)
         {
             case (enemystates.idle):

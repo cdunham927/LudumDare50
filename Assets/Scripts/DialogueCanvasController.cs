@@ -23,6 +23,7 @@ public class DialogueCanvasController : MonoBehaviour
         timeBetweenChars = tbc;
         sentences.Clear();
         pMove.canMove = false;
+        pMove.ZeroVelocity();
 
         foreach (string s in d.sentences)
         {

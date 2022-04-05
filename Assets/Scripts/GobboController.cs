@@ -33,9 +33,8 @@ public class GobboController : EnemyController
         base.Chase();
     }
 
-
     public override void Attack()
     {
-
+        base.Attack();
     }
 }

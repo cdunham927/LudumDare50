@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : LivingThing
 {
@@ -15,6 +16,7 @@ public class PlayerMovement : LivingThing
 
     SpriteRenderer rend;
     public SpriteRenderer[] weaponRend;
+    public Image hpImage;
 
     public override void Awake()
     {
@@ -57,7 +59,12 @@ public class PlayerMovement : LivingThing
     void Update()
     {
         ProcessInputs();
-       
+        hpImage.fillAmount = (hp / maxHp);
+    }
+
+    public void ZeroVelocity()
+    {
+        rb.velocity = Vector2.zero;
     }
 
     void FixedUpdate()

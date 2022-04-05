@@ -18,8 +18,13 @@ public class PlayerCMB : MonoBehaviour
 
     public float pushForce;
 
+    AudioSource src;
+    int cs = 0;
+    public AudioClip[] clip;
+
     private void Awake()
     {
+        src = GetComponent<AudioSource>();
         pMove = FindObjectOfType<PlayerMovement>();
     }
 
@@ -42,6 +47,10 @@ public class PlayerCMB : MonoBehaviour
                 }
             }
             timeBtwAttack = startTimeBtwAttack;
+
+            src.PlayOneShot(clip[cs]);
+            if (cs == 0) cs = 1;
+            else cs = 0;
         }
 
         if (timeBtwAttack > 0) timeBtwAttack -= Time.deltaTime;

@@ -41,12 +41,15 @@ public class NPCController : LivingThing
     GameObject n;
     GameObject h;
 
+    GameController cont;
+
     //Animations
     Animator anim;
 
     public override void Awake()
     {
         anim = GetComponent<Animator>();
+        cont = FindObjectOfType<GameController>();
 
         uiParent = GameObject.FindGameObjectWithTag("uiParent");
         h = Instantiate(hpPrefab);
@@ -88,6 +91,7 @@ public class NPCController : LivingThing
     {
         n.SetActive(false);
         h.SetActive(false);
+        cont.VillagerDeath();
         ChangeState(npcstates.idle);
         base.Die();
     }

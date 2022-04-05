@@ -19,13 +19,13 @@ public class FortuneTeller : MonoBehaviour
 
     public void ShowCard()
     {
-        tarotCards[cont.deaths].SetActive(true);
+        tarotCards[0].SetActive(true);
     }
 
     public void FTDialogue()
     {
         dCanv.EndDialogue();
         dCanv.ShowCard();
-        dCanv.StartDialogue(dialogue[cont.deaths], npcName);
+        dCanv.StartDialogue(dialogue[0], npcName);
     }
 }

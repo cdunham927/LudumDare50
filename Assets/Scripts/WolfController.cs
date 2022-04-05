@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WolfController : EnemyController
 {
+    public float pushForce;
+
     public override void Awake()
     {
         base.Awake();
@@ -36,6 +38,7 @@ public class WolfController : EnemyController
 
     public override void Attack()
     {
-
+        bod.AddForce((target.position - transform.position) * pushForce); 
+        base.Attack();
     }
 }

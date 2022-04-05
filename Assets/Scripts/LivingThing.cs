@@ -17,7 +17,7 @@ public abstract class LivingThing : MonoBehaviour
         hasSetSpawn = true;
     }
 
-    public void Respawn()
+    public virtual void Respawn()
     {
         gameObject.SetActive(true);
         transform.position = spawnPoint;
