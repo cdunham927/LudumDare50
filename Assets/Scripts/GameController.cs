@@ -52,6 +52,9 @@ public class GameController : MonoBehaviour
                     d.Damage(dmg);
                 }
             }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2)) Time.timeScale *= 2f;
+            if (Input.GetKeyDown(KeyCode.Alpha1)) Time.timeScale = 1f;
         }
     }
 

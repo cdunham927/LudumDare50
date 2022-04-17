@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b6df6882d95eb4ca0ccc019d7a4264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 40
+  maxHp: 15
   hp: 0
   def: 1
   spd: 125
